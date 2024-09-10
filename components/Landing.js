@@ -44,7 +44,7 @@ export default function Landing() {
 
     // Move each text separately
     gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent + 1 });
+    gsap.set(secondText.current, { xPercent: xPercent + 0.5 });
 
     requestAnimationFrame(animate);
     xPercent += 0.05 * direction;
