@@ -17,9 +17,18 @@ export default function Project({ setActiveMenu }) {
                 setActiveMenu(i);
               }}
               key={project.title}
-              className="text-[4vw] p-5 border-t"
+              className="flex justify-between items-center p-12 border-t border-gray-300 cursor-pointer transition-all duration-200 hover:opacity-50"
             >
-              <p>{project.title}</p>
+              <a href={`/projects/${project.id}`} className="block w-full">
+                <div className="flex justify-between items-center">
+                  <h2 className="text-6xl m-0 font-light transition-all duration-400 transform hover:-translate-x-2">
+                    {project.title}
+                  </h2>
+                  <p className="font-light transition-all duration-400 transform hover:translate-x-2">
+                    {project.role}
+                  </p>
+                </div>
+              </a>
             </li>
           );
         })}

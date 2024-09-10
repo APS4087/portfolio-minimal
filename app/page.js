@@ -1,7 +1,7 @@
 "use client";
 import Landing from "@/components/Landing";
 import Projects from "@/components/Projects";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   useEffect(() => {
@@ -21,6 +21,7 @@ export default function Home() {
       <Projects />
       <SlidingImages />
       <Contact /> */}
+
       <Landing />
       <Projects />
     </main>
