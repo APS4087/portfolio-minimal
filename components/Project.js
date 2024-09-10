@@ -3,12 +3,12 @@ import { projects } from "./data";
 
 export default function Project({ setActiveMenu }) {
   return (
-    <div className="relative mix-blend-difference z-10 text-white h-screen w-full">
+    <div className="relative mix-blend-difference z-10 text-white h-screen w-full flex justify-center items-center">
       <ul
         onMouseLeave={() => {
           setActiveMenu(null);
         }}
-        className="border-b"
+        className="border-b w-full max-w-4xl" // Center the content
       >
         {projects.map((project, i) => {
           return (
