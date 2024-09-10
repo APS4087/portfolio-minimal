@@ -1,10 +1,8 @@
-// landing component
 "use client";
 import Image from "next/image";
 import styles from "./landing.module.css";
 import { useRef, useEffect } from "react";
-import { animate } from "framer-motion";
-import gsap, { distribute } from "gsap";
+import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Landing() {
@@ -16,7 +14,7 @@ export default function Landing() {
 
   useEffect(() => {
     gsap.set(secondText.current, {
-      left: secondText.current.getBoundingClientRect().width,
+      left: firstText.current.getBoundingClientRect().width,
     });
     requestAnimationFrame(animate);
   }, []);
@@ -43,8 +41,11 @@ export default function Landing() {
     } else if (xPercent > 0) {
       xPercent = -100;
     }
+
+    // Move each text separately
     gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
+    gsap.set(secondText.current, { xPercent: xPercent + 1 });
+
     requestAnimationFrame(animate);
     xPercent += 0.05 * direction;
   };
@@ -55,7 +56,7 @@ export default function Landing() {
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>Freelance Developer -</p>
-          <p ref={secondText}>Freelance Developer -</p>
+          <p ref={secondText}>Creative Developer -</p>
         </div>
       </div>
     </main>
