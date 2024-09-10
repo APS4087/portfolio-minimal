@@ -11,6 +11,12 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontSize: {
+        "10xl": "12rem",
+      },
+      fontFamily: {
+        serif: ["Source Serif Pro", "serif"],
+      },
     },
   },
   plugins: [],

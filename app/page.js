@@ -1,25 +1,34 @@
-// app/page.js
-import Project from "../components/Project";
-import styles from "./page.module.css";
+import Navbar from "@/components/Navbar";
 
-export default function HomePage() {
-  const projects = [
-    { number: 1, title: "Project 01", image: "/images/project01.jpg" },
-    { number: 2, title: "Project 02", image: "/images/project02.jpg" },
-    { number: 3, title: "Project 03", image: "/images/project03.jpg" },
-    { number: 4, title: "Project 04", image: "/images/project04.jpg" },
-  ];
-
+export default function Home() {
   return (
-    <div className={styles.container}>
-      {projects.map((project) => (
-        <Project
-          key={project.number}
-          projectNumber={project.number}
-          title={project.title}
-          image={project.image}
-        />
-      ))}
+    <div className="min-h-screen flex flex-col">
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Main Content */}
+      <div className="flex-grow flex flex-col items-center relative px-4 sm:px-8 lg:px-16">
+        {/* Top Line */}
+        <div
+          className="absolute left-0 right-0 border-t-2 border-gray-400"
+          style={{ top: "1rem" }} // Position close to the top
+        ></div>
+
+        {/* Heading */}
+        <h1
+          className="text-6xl sm:text-8xl lg:text-10xl font-bold font-serif relative z-10"
+          style={{ marginTop: "2rem", marginBottom: "2rem" }}
+        >
+          AUNG PYAE SOE
+        </h1>
+
+        {/* Bottom Line 
+        <div
+          className="absolute left-0 right-0 border-b-2 border-gray-500"
+          style={{ top: "calc(25% + 3rem)" }} 
+        ></div>
+        */}
+      </div>
     </div>
   );
 }

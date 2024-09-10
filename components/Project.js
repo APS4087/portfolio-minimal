@@ -1,51 +1,21 @@
-// components/Project.js
+"use client"; // Important for Framer Motion to work in the App Router
+
 import { motion } from "framer-motion";
-import styles from "./Project.module.css";
 
-const projectVariants = {
-  offscreen: {
-    x: 300, // Start from the right
-    y: -300, // Start from the top
-    opacity: 0,
-  },
-  onscreen: {
-    x: 0, // Move to the center
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.3,
-      duration: 1,
-    },
-  },
-  exit: {
-    x: -300, // Exit to the left
-    y: 300, // Exit to the bottom
-    opacity: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeInOut",
-    },
-  },
-};
-
-export default function Project({ projectNumber, title, image }) {
+const Project = ({ title, image, description }) => {
   return (
     <motion.div
-      className={styles.project}
-      initial="offscreen"
-      whileInView="onscreen"
-      exit="exit"
-      viewport={{ once: false, amount: 0.8 }}
-      variants={projectVariants}
+      className="p-4 border-2 border-black rounded-lg bg-white"
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -100 }}
+      transition={{ duration: 0.8 }}
     >
-      <div className={styles.projectImage}>
-        <img src={image} alt={`Project ${projectNumber}`} />
-      </div>
-      <div className={styles.projectInfo}>
-        <h2>{title}</h2>
-        <a href="#">Open Project {projectNumber}</a>
-      </div>
+      <img src={image} alt={title} className="w-full rounded-lg" />
+      <h2 className="mt-4 text-2xl font-bold">{title}</h2>
+      <p className="mt-2 text-gray-600">{description}</p>
     </motion.div>
   );
-}
+};
+
+export default Project;
