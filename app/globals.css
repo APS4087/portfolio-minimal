@@ -4,14 +4,12 @@
 
 /* app/globals.css */
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  /* import background image from local file */
-  background-image: url('/images/grainyBG.png');
-}
 
+body{
+  margin: 0px;
+  overflow: hidden; /* Hide scrollbars */
+  background-color: #e5e5e5;
+}
 
 @font-face {
   font-family: 'Source Serif Pro';

@@ -1,11 +1,10 @@
 "use client";
-import Landing from "@/components/Landing";
+import Landing from "../components/Landing";
 import Projects from "@/components/Projects";
-import Description from "@/components/Description"; // Import the Description component
+import Description from "@/components/Description";
 import { useEffect, useState, useRef } from "react";
 import Preloader from "@/components/Preloader";
 import { AnimatePresence } from "framer-motion";
-import CustomCursor from "@/components/CustomCursor"; // Import the CustomCursor component
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
