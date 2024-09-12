@@ -9,6 +9,7 @@ body{
   margin: 0px;
   overflow: hidden; /* Hide scrollbars */
   background-color: #e5e5e5;
+  background-image: url('/images/grainyBG.png');
 }
 
 @font-face {

@@ -17,7 +17,7 @@ export const projects = [
   {
     title: "PetalScan",
     role: "Design and Development",
-    src: "/images/2.jpg",
+    src: "/images/PetalScan.png",
   },
   {
     title: "sokrates",
