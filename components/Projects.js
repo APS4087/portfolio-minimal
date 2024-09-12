@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Scene from "@/components/Scene";
 import Project from "@/components/Project";
+import FeaturedText from "./FeatureText";
 import Lenis from "lenis";
 
 export default function Projects() {
@@ -25,6 +26,7 @@ export default function Projects() {
 
   return (
     <main>
+      <FeaturedText /> {/* Add the animated text component */}
       <Project setActiveMenu={setActiveMenu} />
       <Scene activeMenu={activeMenu} />
     </main>

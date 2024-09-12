@@ -56,9 +56,7 @@ export default function index() {
           <p ref={secondText}>Freelance Developer -</p>
         </div>
       </div>
-      <div data-scroll data-scroll-speed={0.1} className={styles.description}>
-        <p>Designer & Developer</p>
-      </div>
+      
     </motion.main>
   )
 }

@@ -1,36 +1,37 @@
-.landing{
+.landing {
   position: relative;
   display: flex;
   height: 100vh;
   overflow: hidden;
 
-  img{
+  img {
     object-fit: cover;
+    border-bottom-left-radius: 50px; /* Adjust the radius as needed */
+    border-bottom-right-radius: 50px; /* Adjust the radius as needed */
   }
-  
-  .sliderContainer{
+
+  .sliderContainer {
     position: absolute;
     top: calc(100vh - 350px);
   }
-  
-  .slider{
+
+  .slider {
     position: relative;
     white-space: nowrap;
   }
-  
-  .slider p{
+
+  .slider p {
     position: relative;
     margin: 0px;
-    color: black;
+    color: #3c3c3c;
     font-size: 230px;
     font-weight: 500;
     padding-right: 50px;
   }
-  
-  .slider p:nth-of-type(2){
+
+  .slider p:nth-of-type(2) {
     position: absolute;
     left: 100%;
     top: 0;
   }
-
 }
