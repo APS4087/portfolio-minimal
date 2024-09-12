@@ -13,6 +13,8 @@ const FeaturedText = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
+  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   return (
     <div
       ref={containerRef}
@@ -44,7 +46,33 @@ const FeaturedText = () => {
             className="shadow"
             style={{ position: "absolute", opacity: "20%" }}
           ></span>
-          Featured Projects
+          Featured{" "}
+          <span style={{ display: "inline-block", position: "relative" }}>
+            Projects
+            {/* SVG for oval animation */}
+            <motion.svg
+              style={{
+                position: "absolute",
+                top: "-50px", // Adjust position to wrap around "Projects"
+                left: "-60px",
+                width: "500px", // Adjust oval size
+                height: "180px",
+              }}
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.ellipse
+                cx="50"
+                cy="60"
+                rx="120" // Adjust horizontal radius (width of oval)
+                ry="30" // Adjust vertical radius (height of oval)
+                stroke="grey"
+                strokeWidth="2"
+                style={{ pathLength }}
+              />
+            </motion.svg>
+          </span>
         </span>
       </motion.h1>
     </div>

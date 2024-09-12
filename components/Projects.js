@@ -4,6 +4,7 @@ import Scene from "@/components/Scene";
 import Project from "@/components/Project";
 import FeaturedText from "./FeatureText";
 import Lenis from "lenis";
+import Rounded from "./RoundedButton";
 
 export default function Projects() {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -29,6 +30,7 @@ export default function Projects() {
       <FeaturedText /> {/* Add the animated text component */}
       <Project setActiveMenu={setActiveMenu} />
       <Scene activeMenu={activeMenu} />
+      <div style={{ height: "50vh" }}></div> {/* Spacer after paragraph */}
     </main>
   );
 }

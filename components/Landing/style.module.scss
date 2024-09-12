@@ -6,8 +6,10 @@
 
   img {
     object-fit: cover;
-    border-bottom-left-radius: 50px; /* Adjust the radius as needed */
-    border-bottom-right-radius: 50px; /* Adjust the radius as needed */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px; 
   }
 
   .sliderContainer {

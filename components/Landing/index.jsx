@@ -39,8 +39,9 @@ export default function index() {
     }
     gsap.set(firstText.current, {xPercent: xPercent})
     gsap.set(secondText.current, {xPercent: xPercent})
-    requestAnimationFrame(animate);
+  
     xPercent += 0.1 * direction;
+    requestAnimationFrame(animate)
   }
 
   return (
@@ -53,7 +54,7 @@ export default function index() {
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>Freelance Developer -</p>
-          <p ref={secondText}>Freelance Developer -</p>
+          <p ref={secondText}>Freelance Designer  -</p>
         </div>
       </div>
       
