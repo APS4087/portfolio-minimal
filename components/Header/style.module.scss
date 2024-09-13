@@ -87,7 +87,18 @@
       a {
         cursor: pointer;
       }
+      .muteButton {
+        background: none;
+        border: none;
+        color: #1b1b1b;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 20px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #ec4e39;
+        }
+      }
     }
-  }
-  
- 
+}
