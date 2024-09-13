@@ -2,12 +2,12 @@ export const projects = [
   {
     title: "Archive Porfolio",
     role: "Design and Development",
-    src: "/images/5.jpg",
+    src: "/images/portfolioArchive.png",
   },
   {
     title: "ezScheme",
     role: "Development",
-    src: "/images/6.jpg",
+    src: "/images/ezScheme.png",
   },
   {
     title: "NurseAi",
@@ -17,7 +17,7 @@ export const projects = [
   {
     title: "PetalScan",
     role: "Design and Development",
-    src: "/images/PetalScan.png",
+    src: "/images/petalScan.png",
   },
   {
     title: "sokrates",

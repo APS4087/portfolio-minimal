@@ -3,7 +3,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { motion } from "framer-motion-3d";
 import { animate, useMotionValue, useTransform } from "framer-motion";
 import { vertex, fragment } from "./Shader";
-import { useTexture, useAspect } from "@react-three/drei";
+import { useTexture } from "@react-three/drei";
 import useMouse from "./useMouse";
 import useDimension from "./useDimension";
 import { projects } from "./data";
@@ -15,10 +15,15 @@ export default function Model({ activeMenu }) {
   const mouse = useMouse();
   const opacity = useMotionValue(0);
   const textures = projects.map((project) => useTexture(project.src));
-  const { width, height } = textures[0].image;
   const lerp = (x, y, a) => x * (1 - a) + y * a;
 
-  const scale = useAspect(width, height, 0.225);
+  // Set a fixed aspect ratio for landscape orientation
+  const landscapeAspectRatio = 4 / 3;
+  const scale = [
+    viewport.width * 0.3,
+    (viewport.width * 0.3) / landscapeAspectRatio,
+    1,
+  ];
   const smoothMouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),
